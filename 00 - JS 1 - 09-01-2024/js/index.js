@@ -1,5 +1,6 @@
 // CONSTANTES
 const $div1 = document.getElementById("1");   
+let $div;
 // VARIABLES
 let divEstado1 = true;
 
@@ -11,17 +12,35 @@ function cambiaColor(objeto){
     // let $caja1 = document.getElementById("1");
     objeto.style.backgroundColor = "yellow";
 }
+// FORMAS DE DECLARAR UNA FUNCIÓN JS
+function saludar(nombre){
+    let cadena = "";
+    cadena += "Hola desde la consola. ";
+    cadena += " Hola=" + nombre;
+    console.log(cadena);
+}
+saludar("Alberto Akkari");
+
+const suma = function(a, b){
+    return a+b;
+}
+console.log(suma(3,4));
+
+const suma1 = (a,b) =>{
+    return a+b;
+};
+console.log(suma1(5,5));
+
 
 // FUNCIÓN REPETITIVA
 function cambiaColorDeFormaRepetida($objeto){
-    setInterval(
-        alert("Hola")
-        (a)=>{
-            alert("variable=" + a);
+    /* setInterval(
+        ()=>{
+            alert("variable=");
         }
         ,
         2000
-    );
+    );*/
 }
 //
 
