@@ -1,11 +1,20 @@
-let pos = 610;
 const $bola = document.getElementById("bola");
+const estilosCalculados = window.getComputedStyle($bola);
+//let pos = 610;
+let pos = estilosCalculados.left;
+alert("Antes: " + pos);
+pos = pos.substring(0, pos.length - 2);
+alert("Después: " + pos);
 
 function moverBola(){
-    pos = pos + 100;
+    pos = parseInt(pos) + 100;
     $bola.style.left = pos + "px";
 }
-
+function moverPersonaje(){
+    setInterval(
+        moverBola
+    ,1000);
+}
 
 
 function cambiarPeloPersonaje(){
@@ -13,15 +22,7 @@ function cambiarPeloPersonaje(){
    console.log("llego");
    $songoku.src="./img/saiyan.jpg";
 }
-function moverPersonaje(){
-    setInterval(
-        moverBola
-    ,1000);
-    // let pos = $bola.style.left;
-    // alert("pos bola=" + pos);
-    // console.log("pos bola=" + pos);
-   
-}
+
 function move(){
     cambiarPeloPersonaje();
     moverPersonaje();
