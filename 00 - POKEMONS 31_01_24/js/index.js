@@ -5,10 +5,10 @@ function displayPokemon(data){
     /*data.abilities[0].ability.name;
     data.species.name;
     data.species.url;*/
-    cad += `<h2> ${data.weight} </h2>`;
-    cad += `<h2> ${data.abilities[0].ability.name} </h2>`;
-    cad += `<h2> ${data.species.name} </h2>`;
-    cad += `<h2> ${data.species.url} </h2>`;
+        cad += `<h2> ${data.weight} </h2>`;
+        cad += `<h2> ${data.abilities[0].ability.name} </h2>`;
+        cad += `<h2> ${data.species.name} </h2>`;
+        cad += `<h2> ${data.species.url} </h2>`;
     pokemonInfo.innerHTML = cad;
 }
 document.getElementById('loadButton').addEventListener('click', ()=>{
